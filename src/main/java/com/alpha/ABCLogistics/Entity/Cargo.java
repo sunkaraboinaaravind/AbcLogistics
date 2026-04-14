@@ -8,7 +8,7 @@ public class Cargo {
 	@Id
 	private int id;
 	private String name;
-	private String decscription;
+	private String description;
 	private int weight;
 	private int count;
 	
@@ -18,11 +18,11 @@ public class Cargo {
 	public Cargo() {
 		super();
 	}
-	public Cargo(int id, String name, String decscription, int weight, int count) {
+	public Cargo(int id, String name, String description, int weight, int count) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.decscription = decscription;
+		this.description = description;
 		this.weight = weight;
 		this.count = count;
 	}
@@ -35,11 +35,11 @@ public class Cargo {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDecscription() {
-		return decscription;
+	public String getDescription() {
+		return description;
 	}
-	public void setDecscription(String decscription) {
-		this.decscription = decscription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public int getWeight() {
 		return weight;
