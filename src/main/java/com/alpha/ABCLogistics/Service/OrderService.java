@@ -111,6 +111,9 @@ public class OrderService {
 		int totalwtoforder = (ord.getCargo().getWeight()*ord.getCargo().getCount());
 		int truckcapacity = truck.getCapacity();
 	
+		if (truck.getCarrier() == null) {
+			throw new RuntimeException("Truck with id " + truckid + " does not have an assigned carrier");
+		}
 		if(truckcapacity>=totalwtoforder) {
 			ord.setCarrier(truck.getCarrier());
 			truck.setCapacity(truck.getCapacity()-totalwtoforder);
